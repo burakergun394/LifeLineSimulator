@@ -1,0 +1,132 @@
+{
+  "questions": [
+    {
+      "id": "personality_test_1",
+      "category": "personality",
+      "question": "Boş zamanlarında en çok ne yapmayı seversin?",
+      "choices": [
+        {
+          "text": "Kitap okumak veya öğrenmek",
+          "effects": { "intelligence": 5, "social": -2 }
+        },
+        {
+          "text": "Arkadaşlarla vakit geçirmek",
+          "effects": { "social": 5, "happiness": 3 }
+        },
+        {
+          "text": "Spor yapmak",
+          "effects": { "health": 5, "happiness": 2 }
+        },
+        {
+          "text": "Para kazanacak işlerle uğraşmak",
+          "effects": { "wealth": 4, "intelligence": 2 }
+        }
+      ]
+    },
+    {
+      "id": "personality_test_2",
+      "category": "personality",
+      "question": "Zor bir durumla karşılaştığında ne yaparsın?",
+      "choices": [
+        {
+          "text": "Analiz ederim ve mantıklı çözüm ararım",
+          "effects": { "intelligence": 4, "happiness": -1 }
+        },
+        {
+          "text": "Başkalarından yardım isterim",
+          "effects": { "social": 4, "intelligence": -1 }
+        },
+        {
+          "text": "Duygularıma göre hareket ederim",
+          "effects": { "happiness": 3, "intelligence": -2 }
+        },
+        {
+          "text": "Fırsata çeviririm",
+          "effects": { "wealth": 3, "social": 2 }
+        }
+      ]
+    },
+    {
+      "id": "personality_test_3",
+      "category": "personality",
+      "question": "İdeal bir akşam nasıl olur?",
+      "choices": [
+        {
+          "text": "Evde dinlenmek",
+          "effects": { "health": 3, "happiness": 2, "social": -2 }
+        },
+        {
+          "text": "Sosyal etkinlikte olmak",
+          "effects": { "social": 5, "happiness": 3, "wealth": -2 }
+        },
+        {
+          "text": "Yeni şeyler öğrenmek",
+          "effects": { "intelligence": 4, "happiness": 1 }
+        },
+        {
+          "text": "Gelecek planları yapmak",
+          "effects": { "intelligence": 2, "wealth": 3 }
+        }
+      ]
+    },
+    {
+      "id": "values_test_1",
+      "category": "values",
+      "question": "Hayattaki en önemli şey nedir?",
+      "choices": [
+        {
+          "text": "Sağlık ve huzur",
+          "effects": { "health": 6, "happiness": 4 }
+        },
+        {
+          "text": "Sevdiklerimle vakit geçirmek",
+          "effects": { "social": 6, "happiness": 3 }
+        },
+        {
+          "text": "Kendimi geliştirmek",
+          "effects": { "intelligence": 5, "health": 2 }
+        },
+        {
+          "text": "Finansal güvenlik",
+          "effects": { "wealth": 6, "happiness": -1 }
+        }
+      ]
+    },
+    {
+      "id": "career_preference_1",
+      "category": "career",
+      "question": "İdeal mesleğin hangi özellikte olmalı?",
+      "choices": [
+        {
+          "text": "İnsanlara yardım eden",
+          "effects": { "social": 4, "happiness": 3, "wealth": -2 }
+        },
+        {
+          "text": "Yüksek maaşlı",
+          "effects": { "wealth": 5, "happiness": 1, "health": -1 }
+        },
+        {
+          "text": "Yaratıcılık gerektiren",
+          "effects": { "intelligence": 3, "happiness": 4, "social": 1 }
+        },
+        {
+          "text": "Güvenli ve istikrarlı",
+          "effects": { "health": 2, "wealth": 3, "happiness": 2 }
+        }
+      ]
+    }
+  ],
+  "tutorials": [
+    {
+      "id": "first_play",
+      "title": "Hayat Çizgisi'ne Hoş Geldin!",
+      "description": "Bu oyunda gerçek hayat gibi kararlar alacak ve sonuçlarını yaşayacaksın.",
+      "steps": [
+        "Karakterini oluştur ve özelliklerini belirle",
+        "Karşına çıkan olayları oku ve dikkatli karar ver",
+        "Aldığın kararlar istatistiklerini etkiler",
+        "Hedefin uzun ve mutlu bir yaşam sürmek!"
+      ]
+    }
+  ]
+}

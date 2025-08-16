@@ -1,0 +1,331 @@
+{
+  "events": [
+    {
+      "id": "university_choice",
+      "title": "Üniversite Seçimi",
+      "description": "Liseyi bitirdin ve şimdi gelecek planların için karar verme zamanı. Hangi yolu seçmek istiyorsun?",
+      "category": "education",
+      "ageRange": { "min": 17, "max": 19 },
+      "rarity": "common",
+      "isRepeatable": false,
+      "choices": [
+        {
+          "id": "university_prestigious",
+          "text": "Prestijli bir üniversiteye git",
+          "effect": { "intelligence": 15, "wealth": -10, "social": 5 },
+          "consequences": {
+            "unlockEvents": ["university_life", "academic_success"],
+            "lockEvents": ["work_early"]
+          }
+        },
+        {
+          "id": "university_practical",
+          "text": "Pratik bir bölüm seç",
+          "effect": { "intelligence": 8, "wealth": 5, "health": 2 }
+        },
+        {
+          "id": "work_start",
+          "text": "Çalışmaya başla",
+          "effect": { "wealth": 20, "intelligence": -5, "social": -3 },
+          "consequences": {
+            "unlockEvents": ["early_career", "work_experience"],
+            "lockEvents": ["university_life"]
+          }
+        },
+        {
+          "id": "gap_year",
+          "text": "Boş bir yıl geçir",
+          "effect": { "happiness": 10, "social": 8, "wealth": -5 },
+          "consequences": {
+            "unlockEvents": ["self_discovery", "travel_experience"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "first_job",
+      "title": "İlk İş Fırsatı",
+      "description": "Eğitimini tamamladın ve ilk iş tekliflerin gelmeye başladı. Hangi seçenek daha cazip?",
+      "category": "career",
+      "ageRange": { "min": 20, "max": 25 },
+      "rarity": "common",
+      "isRepeatable": false,
+      "prerequisites": {
+        "requiredEvents": ["university_choice"]
+      },
+      "choices": [
+        {
+          "id": "corporate_job",
+          "text": "Büyük şirkette işe başla",
+          "effect": { "wealth": 25, "social": 5, "health": -5, "happiness": -3 },
+          "requirements": {
+            "minStats": { "intelligence": 60 }
+          }
+        },
+        {
+          "id": "startup_job",
+          "text": "Startup'ta çalış",
+          "effect": { "intelligence": 10, "social": 8, "wealth": 5, "happiness": 5 },
+          "requirements": {
+            "minStats": { "intelligence": 50, "social": 40 }
+          }
+        },
+        {
+          "id": "freelance_work",
+          "text": "Freelancer ol",
+          "effect": { "happiness": 8, "wealth": 10, "health": 3, "social": -5 }
+        },
+        {
+          "id": "family_business",
+          "text": "Aile işine katıl",
+          "effect": { "wealth": 15, "social": 10, "happiness": -2 },
+          "requirements": {
+            "minStats": { "social": 50 }
+          }
+        }
+      ]
+    },
+    {
+      "id": "health_crisis",
+      "title": "Sağlık Sorunu",
+      "description": "Son zamanlarda kendini yorgun hissediyorsun ve doktor kontrolüne gitmeyi düşünüyorsun.",
+      "category": "health",
+      "ageRange": { "min": 25, "max": 60 },
+      "rarity": "uncommon",
+      "isRepeatable": true,
+      "choices": [
+        {
+          "id": "immediate_treatment",
+          "text": "Hemen tedavi ol",
+          "effect": { "health": 20, "wealth": -15, "happiness": 5 },
+          "requirements": {
+            "minStats": { "wealth": 30 }
+          }
+        },
+        {
+          "id": "natural_healing",
+          "text": "Doğal yöntemlerle iyileş",
+          "effect": { "health": 8, "happiness": 3, "wealth": -3 }
+        },
+        {
+          "id": "ignore_problem",
+          "text": "Görmezden gel",
+          "effect": { "health": -10, "wealth": 5, "happiness": -5 }
+        },
+        {
+          "id": "lifestyle_change",
+          "text": "Yaşam tarzını değiştir",
+          "effect": { "health": 15, "happiness": 8, "social": -3, "wealth": -5 }
+        }
+      ]
+    },
+    {
+      "id": "relationship_opportunity",
+      "title": "Aşk Fırsatı",
+      "description": "Hayatına özel biri girdi. Bu ilişkiyi nasıl yönetmek istiyorsun?",
+      "category": "relationship",
+      "ageRange": { "min": 18, "max": 40 },
+      "rarity": "common",
+      "isRepeatable": true,
+      "choices": [
+        {
+          "id": "serious_relationship",
+          "text": "Ciddi bir ilişki başlat",
+          "effect": { "happiness": 15, "social": 10, "wealth": -5, "health": 5 },
+          "requirements": {
+            "minStats": { "social": 40 }
+          }
+        },
+        {
+          "id": "casual_dating",
+          "text": "Rahat bir ilişki sürdür",
+          "effect": { "happiness": 8, "social": 5, "health": 3 }
+        },
+        {
+          "id": "focus_career",
+          "text": "Kariyere odaklan",
+          "effect": { "wealth": 10, "intelligence": 5, "happiness": -3, "social": -5 }
+        },
+        {
+          "id": "be_cautious",
+          "text": "Temkinli ol",
+          "effect": { "happiness": 3, "social": 2, "health": 1 }
+        }
+      ]
+    },
+    {
+      "id": "investment_opportunity",
+      "title": "Yatırım Fırsatı",
+      "description": "Bir arkadaşın sana iyi bir yatırım fırsatı önerdi. Birikimlerinle ne yapmak istiyorsun?",
+      "category": "career",
+      "ageRange": { "min": 25, "max": 65 },
+      "rarity": "uncommon",
+      "isRepeatable": true,
+      "prerequisites": {
+        "minStats": { "wealth": 40 }
+      },
+      "choices": [
+        {
+          "id": "high_risk_investment",
+          "text": "Yüksek riskli yatırım yap",
+          "effect": { "wealth": 30, "happiness": 10, "health": -5 },
+          "requirements": {
+            "minStats": { "wealth": 60, "intelligence": 50 }
+          }
+        },
+        {
+          "id": "safe_investment",
+          "text": "Güvenli yatırım tercih et",
+          "effect": { "wealth": 15, "happiness": 3 }
+        },
+        {
+          "id": "research_more",
+          "text": "Daha fazla araştır",
+          "effect": { "intelligence": 5, "wealth": 5, "happiness": 1 }
+        },
+        {
+          "id": "decline_investment",
+          "text": "Yatırım yapma",
+          "effect": { "wealth": 3, "happiness": -2 }
+        }
+      ]
+    },
+    {
+      "id": "family_crisis",
+      "title": "Aile Krizi",
+      "description": "Ailende ciddi bir sorun çıktı ve senin müdahalen gerekiyor. Ne yapacaksın?",
+      "category": "relationship",
+      "ageRange": { "min": 20, "max": 70 },
+      "rarity": "rare",
+      "isRepeatable": true,
+      "choices": [
+        {
+          "id": "full_support",
+          "text": "Tam destek ver",
+          "effect": { "social": 15, "happiness": 8, "wealth": -20, "health": -5 }
+        },
+        {
+          "id": "balanced_support",
+          "text": "Dengeli destek ver",
+          "effect": { "social": 8, "happiness": 3, "wealth": -10 }
+        },
+        {
+          "id": "minimal_help",
+          "text": "Minimum yardım et",
+          "effect": { "wealth": -3, "social": -5, "happiness": -8 }
+        },
+        {
+          "id": "stay_away",
+          "text": "Uzak dur",
+          "effect": { "wealth": 5, "social": -15, "happiness": -12 }
+        }
+      ]
+    },
+    {
+      "id": "midlife_reflection",
+      "title": "Orta Yaş Krizi",
+      "description": "Hayatına baktığında bazı şeyleri kaçırdığını hissediyorsun. Bu duyguyla nasıl başa çıkacaksın?",
+      "category": "random",
+      "ageRange": { "min": 35, "max": 50 },
+      "rarity": "uncommon",
+      "isRepeatable": false,
+      "choices": [
+        {
+          "id": "career_change",
+          "text": "Kariyer değiştir",
+          "effect": { "happiness": 15, "intelligence": 8, "wealth": -25, "health": 5 }
+        },
+        {
+          "id": "hobby_pursue",
+          "text": "Yeni hobi edin",
+          "effect": { "happiness": 12, "social": 8, "health": 5, "wealth": -8 }
+        },
+        {
+          "id": "travel_adventure",
+          "text": "Seyahat et",
+          "effect": { "happiness": 20, "social": 5, "health": 8, "wealth": -15 }
+        },
+        {
+          "id": "accept_current",
+          "text": "Mevcut durumu kabul et",
+          "effect": { "happiness": -5, "health": -3, "wealth": 5 }
+        }
+      ]
+    },
+    {
+      "id": "retirement_planning",
+      "title": "Emeklilik Planları",
+      "description": "Emeklilik yaşına yaklaşıyorsun. Gelecek planların neler?",
+      "category": "major",
+      "ageRange": { "min": 55, "max": 65 },
+      "rarity": "common",
+      "isRepeatable": false,
+      "choices": [
+        {
+          "id": "early_retirement",
+          "text": "Erken emekli ol",
+          "effect": { "happiness": 20, "health": 10, "wealth": -30 },
+          "requirements": {
+            "minStats": { "wealth": 70 }
+          }
+        },
+        {
+          "id": "continue_working",
+          "text": "Çalışmaya devam et",
+          "effect": { "wealth": 25, "intelligence": 5, "health": -8, "happiness": -5 }
+        },
+        {
+          "id": "part_time_work",
+          "text": "Yarı zamanlı çalış",
+          "effect": { "happiness": 8, "health": 5, "wealth": 10, "social": 5 }
+        },
+        {
+          "id": "volunteer_work",
+          "text": "Gönüllü işlere odaklan",
+          "effect": { "happiness": 15, "social": 20, "health": 8, "wealth": -10 }
+        }
+      ]
+    }
+  ],
+  "random_events": [
+    {
+      "id": "lottery_win",
+      "title": "Piyango Kazandın!",
+      "description": "İnanılmaz! Piyangoda büyük ikramiye sana çıktı!",
+      "category": "random",
+      "rarity": "legendary",
+      "effect": { "wealth": 50, "happiness": 30, "social": 10 },
+      "probability": 0.001
+    },
+    {
+      "id": "accident",
+      "title": "Kaza",
+      "description": "Küçük bir kaza geçirdin ama ciddi bir yaralanman olmadı.",
+      "category": "random",
+      "rarity": "uncommon",
+      "effect": { "health": -15, "happiness": -8, "wealth": -5 },
+      "probability": 0.05
+    },
+    {
+      "id": "promotion",
+      "title": "Terfi",
+      "description": "İş performansın takdir edildi ve terfi aldın!",
+      "category": "career",
+      "rarity": "uncommon",
+      "effect": { "wealth": 20, "happiness": 15, "social": 5 },
+      "probability": 0.08,
+      "requirements": {
+        "minStats": { "intelligence": 50, "social": 40 }
+      }
+    },
+    {
+      "id": "new_friendship",
+      "title": "Yeni Arkadaşlık",
+      "description": "Harika yeni arkadaşlar edindin!",
+      "category": "relationship",
+      "rarity": "common",
+      "effect": { "social": 12, "happiness": 8 },
+      "probability": 0.15
+    }
+  ]
+}
