@@ -1,18 +1,7 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-
-interface Character {
-  name: string;
-  age: number;
-  stats: {
-    health: number;
-    happiness: number;
-    intelligence: number;
-    wealth: number;
-    social: number;
-  };
-}
+import { Character } from '../types/character';
 
 interface GameEvent {
   id: string;

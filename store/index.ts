@@ -1,1 +1,1 @@
-export { default as gameStore } from './gameStore';
+export { default as useGameStore } from './gameStore';
