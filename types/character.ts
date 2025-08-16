@@ -13,6 +13,7 @@ export interface Character {
   stats: CharacterStats;
   createdAt?: Date;
   lastPlayedAt?: Date;
+  completedEvents?: string[];
 }
 
 export interface CharacterCreationForm {
